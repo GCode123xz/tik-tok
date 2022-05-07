@@ -24,7 +24,7 @@ const enviarNombre = (e)=>{
     $span.textContent=`${$name.value}`;
     setInterval(()=>{
         document.querySelector("h5").classList.add("hidden");
-    },7000);
+    },8000);
 
 
 }
