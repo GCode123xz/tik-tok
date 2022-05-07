@@ -5,6 +5,11 @@
 
 
 body {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
     font-family: "AMATIC";
     box-sizing: border-box;
     font-size: 16px;
@@ -15,6 +20,7 @@ body {
     background-color: rgb(246, 255, 0);
     overflow: hidden;
     font-size: 18px;
+    touch-action: none;
 }
 /*titulos*/
 .titulo{
@@ -34,18 +40,22 @@ body {
 }
 /*img*/
 .img-1{
-background-size: contain;
-text-align: center;
-margin: auto;
- width: 80%;
- height: -40%;
- position: relative;
- transform: translateX(-8000px);
- transition: transform 4s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+    text-align: center;
+    margin: auto;
+    width: 80%;
+    height: 50%;
+    position: relative;
+    transform: translateX(-8000px);
+    transition: transform 4s ease-in-out;
 }
 .img-1 img{
-    width:40%;
-    height:40%;
+    width:60%;
+    height:60%;
+    transition: all 0.5s ease-in-out;
 }
 .img-1:hover{
     background-image: url("https://www.publicdomainpictures.net/pictures/20000/nahled/red-hearts-wallpaper.jpg");
@@ -54,8 +64,9 @@ margin: auto;
     background-clip: border-box;
 }
 .img-1 img.active{
-   width: 50%;
-   height: 40%;
+   width: 80%;
+   height: 80%;
+   transition: all 0.5s ease-in-out;
 }
 .img-1.active{
     transform: translateX(0px);
@@ -108,3 +119,5 @@ h5.hidden{
     visibility: hidden;
     transition: all 0.5s ease-in-out;
 }
+
+/* Responsive */
