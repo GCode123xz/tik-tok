@@ -1,20 +1,110 @@
+@font-face {
+    font-family: "AMATIC";
+    src: url(./fonts/Amatic/Amatic-Bold.ttf);
+}
+
+
 body {
+    font-family: "AMATIC";
     box-sizing: border-box;
     font-size: 16px;
+    width: 100vw;
+    height: 100vh;
     padding: 0;
     margin: 0;
     background-color: rgb(246, 255, 0);
+    overflow: hidden;
+    font-size: 18px;
 }
+/*titulos*/
 .titulo{
     font-size: 5rem;
+    font-weight: bold;
     text-align: center;
+    height: 10%;
+    transform: translateY(-8000px);
+    transition: transform 2s ease-in-out;
+
 }
+.titulo.active{
+    transform: translateY(0px);
+}
+.corazon{
+    color: red;
+}
+/*img*/
 .img-1{
- text-align: center;
+background-size: contain;
+text-align: center;
+margin: auto;
+ width: 80%;
+ height: -40%;
+ position: relative;
+ transform: translateX(-8000px);
+ transition: transform 4s ease-in-out;
+}
+.img-1 img{
+    width:40%;
+    height:40%;
 }
 .img-1:hover{
     background-image: url("https://www.publicdomainpictures.net/pictures/20000/nahled/red-hearts-wallpaper.jpg");
     background-position: center;
     background-size: cover;
     background-clip: border-box;
+}
+.img-1 img.active{
+   width: 50%;
+   height: 40%;
+}
+.img-1.active{
+    transform: translateX(0px);
+}
+/*Modal*/
+.modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    inset: 0;
+    background-color:rgba(255,0,128,1);
+    z-index: 999;
+}
+.saludo{
+ color: rgb(250,250,250);
+ text-align: center;
+ font-size: 3rem;
+}
+input[type="text"]{
+    width: 10rem;
+}
+input::placeholder{
+    color: rgb(0,0,0);
+    font-weight: bold;
+    font-style: inherit;
+}
+h5{
+    display: block;
+    position: absolute;
+   bottom: 20%;
+   left: 1%;
+   margin: auto;
+   width: 90%;
+   font-size: 8rem;
+   font-weight: 800;
+   animation: visible 3s infinite;
+}
+@keyframes visible {
+    20%,60%,90%{
+        opacity: 0;
+    }
+    40%,70%,100%{
+        opacity: 1;
+    }
+    
+}
+h5.hidden{
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-in-out;
 }
