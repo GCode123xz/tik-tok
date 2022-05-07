@@ -44,7 +44,6 @@ body {
     justify-content: center;
     align-items: center;
     background-size: contain;
-    text-align: center;
     margin: auto;
     width: 80%;
     height: 50%;
@@ -121,3 +120,18 @@ h5.hidden{
 }
 
 /* Responsive */
+@media screen and (min-width: 720px){
+    .titulo{
+        font-size: 10rem;
+    }
+}
+@media screen and (min-width: 1024px){
+    .img-1{
+        width: 60%;
+        height: 50%;
+        margin-bottom: 100px;
+    }
+    .img-1 img{
+        width: 50%;
+    }
+}
