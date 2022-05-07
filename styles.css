@@ -126,7 +126,7 @@ h5.hidden{
         font-size: 10rem;
     }
     h5{
-        font-size: 9rem;
+        font-size: 10rem;
         width: 75%;
         right: 1px;
     }
@@ -142,7 +142,7 @@ h5.hidden{
     h5{
         bottom: 30%;
         left: 18%;
-        font-size: 5rem;
+        font-size: 6rem;
     }
 }
 @media screen and (max-width: 280px){
