@@ -7,13 +7,14 @@ const $name = document.querySelector(".input-name input");
 const $modal = document.querySelector(".modal");
 const $span = document.querySelector(".usuario");
 const $frame_1 = document.querySelector("#wrap");
-const $frame_2 = document.querySelector(".card");
+const $frame_2 = document.querySelector(".img-2");
 const check = document.querySelector("#checkbox");
 
 document.addEventListener("DOMContentLoaded",()=>{
     $frame_1.addEventListener("click",()=>{
         if(!check.checked){
          $frame_1.remove()
+         $frame_2.classList.add("active")
         }
     })
     $img.addEventListener("click",()=>{

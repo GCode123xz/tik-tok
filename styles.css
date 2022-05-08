@@ -1,6 +1,6 @@
 @font-face {
     font-family: "AMATIC";
-    src: url(./fonts/Amatic/Amatic-Bold.ttf);
+    src: url(fonts/Amatic-Bold.ttf);
 }
 body {
     display:flex;
@@ -29,6 +29,11 @@ body {
     transform: translateY(-8000px);
     transition: transform 2s ease-in-out;
 
+}
+.titulo-2{
+    font-size: 5rem;
+    font-weight: bold;
+    text-align: center;
 }
 .titulo.active{
     transform: translateY(0px);
@@ -135,13 +140,16 @@ h5.hidden{
       margin: 20px auto 0;
   }
   #wrap.active{
-    display: flex;
+    display: block;
+    right:300px;
+    position:relative ;
+    top: 150px;
   }
   
   
   #letter_wrap {
       overlay:hidden;
-      height: 450px;
+      height: 446px;
       position:relative;
       top: 0px;
       -webkit-transition: all 1s ease-in-out;
@@ -225,11 +233,11 @@ h5.hidden{
       -o-transition: all 1s ease-in-out;
       transition: all 1s ease-in-out;
       background: #ffc url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/144467/letter_bg.png');
-      position:relative;
+      position: relative;
       top:200px;
       overlay: hidden;
       height: 190px;
-      width: 400px;
+      width: 446px;
       margin: 0 auto;
       padding: 20px;
       border:1px solid #fff;
@@ -263,13 +271,18 @@ h5.hidden{
       transition: opacity 1s ease-in-out 2s;
   } 
   /* carta dos */
-  @import "/scss/cardTre.scss";
-  .frame-2{
-      display: none;
-  }
-  .frame-2.active{
-      display: block;
-  }
+.img-2{
+    display: none;
+}
+.img-2.active{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+    width: 50%;
+    height: 50%;
+  
+   
+}
 /* Responsive */
 @media screen and (min-width: 720px){
     .titulo{
@@ -280,22 +293,28 @@ h5.hidden{
         width: 75%;
         right: 1px;
     }
+  .frame-1{
+      width: 5px;
+  }
 }
 @media screen and (min-width: 1024px){
+    .titulo{
+        font-size: 10rem;
+    }
     .img-1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 60%;
-        height: 50%;
     }
     .img-1 img{
         width: 50%;
     }
     h5{
+        text-align: center;
         bottom: 30%;
-        left: 18%;
+        left: 1px;
         font-size: 6rem;
-    }
-    #letter{
-        width: 50%;
     }
 }
 @media screen and (max-width: 280px){
@@ -304,9 +323,10 @@ h5.hidden{
     }
     #wrap{
         display: flex;
+        justify-content: center;
         align-items: center;
-       margin-left: 15px;
-       margin-top: 5rem;
+        position: relative;
+        left: 1rem;
     }
     #back{
         width: 90vw;
@@ -322,6 +342,11 @@ h5.hidden{
     #letter{
         margin: 10px;
         width: 70vw;
-        
+    }
+    .img-2.active{
+        display:contents;
+    }
+    .img-2 img {
+        bottom: 50%;;
     }
 }
