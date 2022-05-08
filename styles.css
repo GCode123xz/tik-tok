@@ -141,7 +141,6 @@ h5.hidden{
   }
   #wrap.active{
     display: block;
-    right:300px;
     position:relative ;
     top: 150px;
   }
@@ -293,9 +292,7 @@ h5.hidden{
         width: 75%;
         right: 1px;
     }
-  .frame-1{
-      width: 5px;
-  }
+
 }
 @media screen and (min-width: 1024px){
     .titulo{
