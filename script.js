@@ -6,12 +6,26 @@ const $form = document.querySelector("form");
 const $name = document.querySelector(".input-name input");
 const $modal = document.querySelector(".modal");
 const $span = document.querySelector(".usuario");
+const $frame_1 = document.querySelector("#wrap");
+const $frame_2 = document.querySelector(".card");
+const check = document.querySelector("#checkbox");
 
 document.addEventListener("DOMContentLoaded",()=>{
+    $frame_1.addEventListener("click",()=>{
+        if(!check.checked){
+         $frame_1.remove()
+        }
+    })
     $img.addEventListener("click",()=>{
-        click ? click=false : click=true;
-        click ?  $img.src= rutimg2 : $img.src=rutimg ;
+        $img.src= rutimg2; 
         $img.classList.toggle("active");
+        setTimeout(()=>{
+            $img.parentElement.remove();
+            document.querySelector(".titulo").remove();
+            $frame_1.classList.add("active");
+            
+        },5000);
+        
     })
 
     $form.addEventListener("submit",enviarNombre)
@@ -24,7 +38,5 @@ const enviarNombre = (e)=>{
     $span.textContent=`${$name.value}`;
     setInterval(()=>{
         document.querySelector("h5").classList.add("hidden");
-    },8000);
-
-
+    },5000);
 }
