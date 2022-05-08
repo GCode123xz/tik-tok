@@ -315,6 +315,17 @@ h5.hidden{
         font-size: 6rem;
     }
 }
+@media screen and (max-width: 540px){
+    body{
+        gap: 0px;
+    }
+    .img-2.active{
+        display:contents;
+    }
+    .img-2 img {
+        bottom: 50%;;
+    }
+}
 @media screen and (max-width: 280px){
     h5{
            font-size: 2rem;
@@ -340,11 +351,5 @@ h5.hidden{
     #letter{
         margin: 10px;
         width: 70vw;
-    }
-    .img-2.active{
-        display:contents;
-    }
-    .img-2 img {
-        bottom: 50%;;
     }
 }
